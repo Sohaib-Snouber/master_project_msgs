@@ -7,6 +7,9 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(action_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
@@ -17,9 +20,18 @@ set(msg_files
   "msg/Waypoint.msg"
   "msg/JointState.msg"
 )
+set(action_files
+  "action/CurrentState.action"
+  "action/MoveToTarget.action"
+  "action/MoveSlide.action"
+  "action/CloseGripper.action"
+  "action/LiftGripper.action"
+  "action/OpenGripper.action"
+)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
+  ${action_files}
   DEPENDENCIES geometry_msgs std_msgs
 )
 
