@@ -1,0 +1,10 @@
+# Goal
+string task_name_or_stage_name
+---
+# Result
+bool success
+int uid[]
+---
+# Feedback
+float32 progress
+string current_stage_name

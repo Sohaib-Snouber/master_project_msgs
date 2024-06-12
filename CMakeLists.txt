@@ -27,6 +27,8 @@ set(action_files
   "action/CloseGripper.action"
   "action/LiftGripper.action"
   "action/OpenGripper.action"
+  "action/ProjectAction.action"
+  "action/MasterAction.action"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

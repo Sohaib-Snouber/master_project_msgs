@@ -1,0 +1,11 @@
+# Goal
+string command_type  # "move", "check_status", "gripper_open", "gripper_close"
+geometry_msgs/PoseStamped target_pose  # Only used if command_type is "move"
+bool wait_for_completion  # Whether to wait for the action to complete
+---
+# Result
+bool success
+string message  # Detailed message about the result
+---
+# Feedback
+float32 progress
